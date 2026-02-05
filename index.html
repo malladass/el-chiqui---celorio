@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Chiqui | Restaurante en Celorio, Llanes - Tradición y Fusión</title>
+    <meta name="description" content="Descubre El Chiqui en Celorio. 60 años de historia, desde la cocina de la abuela Nieves hasta la fusión de Carlos. El mejor sabor de Llanes." />
+    <meta name="keywords" content="Restaurante en Celorio, Comer en Llanes, Cocina fusión Asturias, Cachopo Llanes, El Chiqui" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts: Playfair Display (Serif) for headings, Inter (Sans) for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['"Inter"', 'sans-serif'],
+            },
+            colors: {
+              cream: '#FDFBF7',
+              sand: '#E5DCC5',
+              stone: {
+                850: '#1c1917',
+              },
+              sage: {
+                100: '#EEF2F0',
+                800: '#3A4D3F', // Deep sage green
+              },
+              ocean: {
+                700: '#5C7C8A', // Slate blue/grey for Cantabrian vibe
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #FDFBF7; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #D6CDB8; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #5C7C8A; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.31.1",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-cream text-stone-800 antialiased selection:bg-sand selection:text-stone-900">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
