@@ -7,7 +7,7 @@ export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // WhatsApp Link Logic
-  const whatsappUrl = "https://wa.me/34620816621?text=Hola,%20vengo%20de%20la%20web%20y%20quiero%20hacer%20una%20reserva.%0A%0A-%20Nombre:%20%0A-%20Personas:%20%0A-%20D%C3%ADa:%20%0A-%20Hora:%20";
+  const whatsappUrl = "https://wa.me/34684603449?text=hola!%20me%20gustaria%20reservar%20una%20mesa%20con%20vosotros!%0A%0A-%20Nombre:%20%0A-%20Personas:%20%0A-%20D%C3%ADa:%20%0A-%20Hora:%20";
 
   useEffect(() => {
     const handleScroll = () => {
