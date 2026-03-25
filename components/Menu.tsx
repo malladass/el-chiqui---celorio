@@ -1,48 +1,49 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const CATEGORIES = ["Entrantes", "Arroces", "Pescados", "Carnes", "Mariscos", "Postres"];
+const CATEGORIES = ["Para Empezar", "Nuestros Arroces", "Del Mar Cantábrico", "De la Tierra", "El Toque Dulce"];
 
 const menuItems = [
-  // ENTRANTES
-  { name: "Pastel de Cabracho", price: "11€", category: "Entrantes", description: "Con mayonesa en su tinta" },
-  { name: "Croquetas Caseras", price: "10€", category: "Entrantes", description: "De jamón" },
-  { name: "Bocartes del Cantábrico", price: "10€", category: "Entrantes", description: "Marinados y fritos" },
-  { name: "Tortinos (3)", price: "9€", category: "Entrantes", description: "Con manzana, sabadiego y huevo de codorniz" },
-  { name: "Brioche de Rabo", price: "13€", category: "Entrantes", description: "Con mayonesa picante" },
-  { name: "Ensalada Templada", price: "13€", category: "Entrantes", description: "Jamón, langostinos y champiñones" },
-  { name: "Ensalada de Tomate", price: "13€", category: "Entrantes", description: "Cebolla encurtida y bonito" },
-  { name: "Fritos de Merluza", price: "18€", category: "Entrantes", description: "Con mayonesa picante" },
+  // PARA EMPEZAR
+  { name: "Tiradito de Corvina", price: "17€", category: "Para Empezar", description: "Fusión y frescura en cada bocado" },
+  { name: "Verdinas", price: "13€", category: "Para Empezar", description: "Con compangu" },
+  { name: "Pastel de Cabracho", price: "11€", category: "Para Empezar", description: "Con mayonesa en su tinta" },
+  { name: "Croquetas Caseras", price: "10€", category: "Para Empezar", description: "De jamón" },
+  { name: "Bocartes del Cantábrico", price: "10€", category: "Para Empezar", description: "Marinados y fritos" },
+  { name: "Tortinos (3)", price: "9€", category: "Para Empezar", description: "Con manzana, sabadiego y huevo de codorniz" },
+  { name: "Brioche de Rabo", price: "13€", category: "Para Empezar", description: "Con mayonesa picante" },
+  { name: "Ensalada Templada", price: "13€", category: "Para Empezar", description: "Jamón, langostinos y champiñones" },
+  { name: "Ensalada de Tomate", price: "13€", category: "Para Empezar", description: "Cebolla encurtida y bonito" },
+  { name: "Fritos de Merluza", price: "18€", category: "Para Empezar", description: "Con mayonesa picante" },
 
-  // ARROCES
-  { name: "Arroz con Bogavante", price: "29€", category: "Arroces", description: "Precio por ración, mínimo 2" },
-  { name: "Arroz Negro", price: "19€", category: "Arroces", description: "Con chipirones y ali oli" },
-  { name: "Arroz con Almejas", price: "20€", category: "Arroces", description: "Con nuestro toque picante" },
-  { name: "Arroz con Carabineros", price: "33€", category: "Arroces", description: "Precio por ración" },
+  // NUESTROS ARROCES
+  { name: "Arroz con Bogavante", price: "33€", category: "Nuestros Arroces", description: "Precio por ración, mínimo 2" },
+  { name: "Arroz Negro", price: "19€", category: "Nuestros Arroces", description: "Con chipirones y ali oli" },
+  { name: "Arroz con Almejas", price: "20€", category: "Nuestros Arroces", description: "Con nuestro toque picante" },
+  { name: "Arroz con Carabineros", price: "33€", category: "Nuestros Arroces", description: "Precio por ración, mínimo 2" },
 
-  // PESCADOS
-  { name: "Merluza de Anzuelo", price: "18€", category: "Pescados", description: "A baja temperatura con espuma de patata" },
+  // DEL MAR CANTÁBRICO
+  { name: "Rodaballo", price: "S/R", category: "Del Mar Cantábrico", description: "Pescado fresco del día, consulta con nuestro personal" },
+  { name: "Merluza", price: "S/R", category: "Del Mar Cantábrico", description: "" },
+  { name: "Andarica", price: "10€", category: "Del Mar Cantábrico", description: "" },
+  { name: "Navajas (12 und aprox)", price: "12€", category: "Del Mar Cantábrico", description: "" },
+  { name: "Gambón (12 und aprox)", price: "11€", category: "Del Mar Cantábrico", description: "" },
+  { name: "Bogavante", price: "S/R", category: "Del Mar Cantábrico", description: "" },
+  { name: "Carabinero", price: "26€", category: "Del Mar Cantábrico", description: "" },
+  { name: "Mariscada", price: "86€", category: "Del Mar Cantábrico", description: "Bogavante, 2 andaricas, gambón, navajas, langostinos y almejas" },
 
-  // CARNES
-  { name: "Escalopines Plancha", price: "13€", category: "Carnes", description: "Con salsa de cabrales" },
-  { name: "Cachopo", price: "25€", category: "Carnes", description: "Ternera asturiana con jamón y queso ahumau de pría" },
-  { name: "Hamburguesa Fuaaa!", price: "15€", category: "Carnes", description: "160gr carne angus, queso cheddar y salsa al foie" },
-  { name: "Costilla de Angus", price: "20€", category: "Carnes", description: "A baja temperatura y glaseada" },
+  // DE LA TIERRA
+  { name: "Escalopines Plancha", price: "13€", category: "De la Tierra", description: "Con salsa de cabrales" },
+  { name: "Cachopo", price: "25€", category: "De la Tierra", description: "Ternera asturiana con jamón y queso ahumau de pría" },
+  { name: "Hamburguesa Fuaaa!", price: "15€", category: "De la Tierra", description: "160gr carne angus, queso cheddar, crema de manzana, salsa al foie, coronado con foie fresco" },
+  { name: "Costilla de Angus", price: "20€", category: "De la Tierra", description: "A baja temperatura y glaseada" },
 
-  // MARISCOS
-  { name: "Andarica", price: "10€", category: "Mariscos", description: "" },
-  { name: "Navajas (12 und aprox)", price: "12€", category: "Mariscos", description: "" },
-  { name: "Gambón (12 und aprox)", price: "11€", category: "Mariscos", description: "" },
-  { name: "Bogavante", price: "S/R", category: "Mariscos", description: "" },
-  { name: "Carabinero", price: "26€", category: "Mariscos", description: "" },
-  { name: "Mariscada", price: "86€", category: "Mariscos", description: "Bogavante, 2 andaricas, gambón, navajas, langostinos y almejas" },
-
-  // POSTRES
-  { name: "Tarta de Queso", price: "6€", category: "Postres", description: "" },
-  { name: "Lingote de Nutella", price: "7€", category: "Postres", description: "" },
-  { name: "Tarta de Queso y Lotus", price: "7€", category: "Postres", description: "" },
-  { name: "Torrija con helado de pistacho", price: "7€", category: "Postres", description: "" },
-  { name: "Coulant con helado de pistacho", price: "7€", category: "Postres", description: "" }
+  // EL TOQUE DULCE
+  { name: "Tarta de Queso", price: "6€", category: "El Toque Dulce", description: "" },
+  { name: "Lingote de Nutella", price: "7€", category: "El Toque Dulce", description: "" },
+  { name: "Tarta de Queso y Lotus", price: "7€", category: "El Toque Dulce", description: "" },
+  { name: "Torrija con helado de pistacho", price: "7€", category: "El Toque Dulce", description: "" },
+  { name: "Coulant con helado de pistacho", price: "7€", category: "El Toque Dulce", description: "" }
 ];
 
 export const Menu: React.FC = () => {

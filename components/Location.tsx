@@ -4,9 +4,7 @@ import { Button } from './Button';
 
 export const Location: React.FC = () => {
   // WhatsApp logic reused
-  const phoneNumber = "34620816621";
-  const message = encodeURIComponent("Hola, quiero reservar una mesa en El Chiqui");
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+  const whatsappUrl = "https://wa.me/34620816621?text=Hola,%20vengo%20de%20la%20web%20y%20quiero%20hacer%20una%20reserva.%0A%0A-%20Nombre:%20%0A-%20Personas:%20%0A-%20D%C3%ADa:%20%0A-%20Hora:%20";
 
   return (
     <section id="ubicacion" className="py-0 flex flex-col lg:grid lg:grid-cols-2">
