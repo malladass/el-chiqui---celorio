@@ -16,7 +16,7 @@ export const Location: React.FC = () => {
             <MapPin className="text-sand shrink-0 mt-1" />
             <div>
               <p className="text-white text-lg font-medium mb-1">Celorio, Llanes</p>
-              <p>Barrio La Tiyera, s/n</p>
+              <p>Camino Central, s/n</p>
               <p>33595 Asturias, España</p>
             </div>
           </div>
@@ -31,9 +31,11 @@ export const Location: React.FC = () => {
 
           <div className="pt-8">
             <h3 className="font-serif text-xl text-white mb-4">Horario</h3>
-            <p className="mb-2">Viernes - Domingo</p>
-            <p>13:30 - 16:00 | 20:30 - 23:30</p>
-            <p className="text-sm mt-2 text-sand italic">volvemos en Marzo</p>
+            <div className="space-y-1">
+              <p><span className="text-white font-medium">Viernes:</span> 20:30 - 23:00</p>
+              <p><span className="text-white font-medium">Sábado y Domingo:</span> 13:30 - 15:45 | 20:30 - 23:00</p>
+            </div>
+            <p className="text-sm mt-3 text-sand italic">Julio y Agosto: abierto todos los días</p>
           </div>
 
           <div className="pt-8">

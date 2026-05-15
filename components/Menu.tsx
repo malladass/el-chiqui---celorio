@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const CATEGORIES = ["Para Empezar", "Nuestros Arroces", "Del Mar Cantábrico", "De la Tierra", "El Toque Dulce"];
 
@@ -49,8 +48,6 @@ const menuItems = [
 export const Menu: React.FC = () => {
   const [activeTab, setActiveTab] = useState(CATEGORIES[0]);
 
-  const filteredItems = menuItems.filter(item => item.category === activeTab);
-
   return (
     <section id="carta" className="py-24 bg-sage-100/50">
       <div className="container mx-auto px-4 md:px-8">
@@ -75,24 +72,22 @@ export const Menu: React.FC = () => {
           ))}
         </div>
 
-        {/* Menu Items List */}
+        {/* Menu Items List — render all categories for SEO, hide inactive via CSS */}
         <div className="max-w-3xl mx-auto min-h-[400px]">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.3 }}
-              className="space-y-8"
+          {CATEGORIES.map((category) => (
+            <div
+              key={category}
+              className={`space-y-8 ${activeTab === category ? 'block' : 'hidden'}`}
+              aria-hidden={activeTab !== category}
             >
-              {filteredItems.map((item, idx) => (
+              <h3 className="sr-only">{category}</h3>
+              {menuItems.filter(item => item.category === category).map((item, idx) => (
                 <div key={idx} className="flex justify-between items-start group border-b border-stone-200 pb-6 last:border-0">
                   <div className="pr-8">
                     <div className="flex items-center gap-3 mb-1">
-                      <h3 className="font-serif text-xl font-bold text-stone-800 group-hover:text-ocean-700 transition-colors">
+                      <h4 className="font-serif text-xl font-bold text-stone-800 group-hover:text-ocean-700 transition-colors">
                         {item.name}
-                      </h3>
+                      </h4>
                     </div>
                     {item.description && (
                       <p className="font-sans text-stone-600 text-sm leading-relaxed">
@@ -105,8 +100,8 @@ export const Menu: React.FC = () => {
                   </div>
                 </div>
               ))}
-            </motion.div>
-          </AnimatePresence>
+            </div>
+          ))}
         </div>
       </div>
     </section>

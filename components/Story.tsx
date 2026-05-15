@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 export const Story: React.FC = () => {
   const generations = [
@@ -39,12 +38,8 @@ export const Story: React.FC = () => {
 
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {generations.map((gen, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: index * 0.2, duration: 0.7 }}
               className="flex flex-col items-center text-center group"
             >
               <div className="relative mb-6 overflow-hidden rounded-sm shadow-md aspect-[3/4] w-full max-w-[300px]">
@@ -62,7 +57,7 @@ export const Story: React.FC = () => {
               <p className="font-sans text-stone-600 text-sm leading-relaxed px-4">
                 {gen.desc}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

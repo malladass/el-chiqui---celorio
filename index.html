@@ -1,90 +1,73 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es-ES" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>El Chiqui | Restaurante en Celorio, Llanes - Tradición y Fusión</title>
-    <meta name="description" content="Descubre El Chiqui en Celorio. 60 años de historia, desde la cocina de la abuela Nieves hasta la fusión de Carlos. El mejor sabor de Llanes." />
-    <meta name="keywords" content="Restaurante en Celorio, Comer en Llanes, Cocina fusión Asturias, Cachopo Llanes, El Chiqui" />
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+    <meta name="theme-color" content="#1c1917" />
+
+    <title>El Chiqui | Restaurante en Celorio, Llanes — Tradición asturiana y fusión</title>
+    <meta name="description" content="Restaurante El Chiqui en Celorio (Llanes, Asturias). Desde 1966, tres generaciones de cocina asturiana, arroces, pescados del Cantábrico, cachopo y fusión. Reserva mesa." />
+    <meta name="keywords" content="restaurante Celorio, comer en Llanes, restaurante Llanes, donde comer en Celorio, cachopo Llanes, arroz con bogavante Asturias, restaurante oriente de Asturias, El Chiqui" />
+    <meta name="author" content="Restaurante El Chiqui" />
+    <meta name="robots" content="index, follow" />
+    <meta name="geo.region" content="ES-AS" />
+    <meta name="geo.placename" content="Celorio, Llanes, Asturias" />
+    <meta name="geo.position" content="43.4276959;-4.8100113" />
+    <meta name="ICBM" content="43.4276959, -4.8100113" />
+
+    <link rel="canonical" href="https://elchiqui.es/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="restaurant.restaurant" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="El Chiqui" />
+    <meta property="og:title" content="El Chiqui | Restaurante en Celorio, Llanes" />
+    <meta property="og:description" content="Restaurante familiar en Celorio (Llanes). 60 años de tradición asturiana, arroces, pescados del Cantábrico, cachopo y fusión." />
+    <meta property="og:url" content="https://elchiqui.es/" />
+    <meta property="og:image" content="https://elchiqui.es/solomillo-fua.jpg" />
+    <meta property="og:image:alt" content="Solomillo con foie de El Chiqui, restaurante en Celorio" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="El Chiqui | Restaurante en Celorio, Llanes" />
+    <meta name="twitter:description" content="60 años de cocina asturiana en Celorio. Arroces, pescados del Cantábrico, cachopo y fusión." />
+    <meta name="twitter:image" content="https://elchiqui.es/solomillo-fua.jpg" />
+
     <!-- Fonts: Playfair Display (Serif) for headings, Inter (Sans) for body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              serif: ['"Playfair Display"', 'serif'],
-              sans: ['"Inter"', 'sans-serif'],
-            },
-            colors: {
-              cream: '#FDFBF7',
-              sand: '#E5DCC5',
-              stone: {
-                850: '#1c1917',
-              },
-              sage: {
-                100: '#EEF2F0',
-                800: '#3A4D3F', // Deep sage green
-              },
-              ocean: {
-                700: '#5C7C8A', // Slate blue/grey for Cantabrian vibe
-              }
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      /* Custom scrollbar for webkit */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #FDFBF7; 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #D6CDB8; 
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #5C7C8A; 
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "framer-motion": "https://esm.sh/framer-motion@^12.31.1",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
 
     <!-- Schema.org Structured Data: Restaurant -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Restaurant",
+      "@id": "https://elchiqui.es/#restaurant",
       "name": "El Chiqui",
-      "image": "https://elchiqui.es/solomillo-fua.jpg",
-      "@id": "https://elchiqui.es",
-      "url": "https://elchiqui.es",
+      "alternateName": "Restaurante El Chiqui",
+      "url": "https://elchiqui.es/",
+      "image": [
+        "https://elchiqui.es/solomillo-fua.jpg",
+        "https://elchiqui.es/logo.png"
+      ],
+      "logo": "https://elchiqui.es/logo.png",
+      "description": "Restaurante familiar en Celorio (Llanes, Asturias) fundado en 1966. Tres generaciones ofreciendo cocina tradicional asturiana y fusión. Especialidad en arroces, pescados del Cantábrico, mariscos, cachopo y carnes.",
       "telephone": "+34985400308",
-      "servesCuisine": ["Asturiana", "Fusión", "Tradicional", "Mariscos"],
-      "priceRange": "$$",
+      "priceRange": "€€",
+      "servesCuisine": ["Asturiana", "Tradicional", "Fusión", "Mariscos", "Pescados", "Mediterránea"],
+      "acceptsReservations": "True",
+      "menu": "https://elchiqui.es/#carta",
+      "hasMenu": "https://elchiqui.es/#carta",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Barrio La bolerina, s/n",
+        "streetAddress": "Camino Central, s/n",
         "addressLocality": "Celorio",
         "addressRegion": "Asturias",
         "postalCode": "33595",
@@ -95,28 +78,56 @@
         "latitude": 43.4276959,
         "longitude": -4.8100113
       },
+      "areaServed": [
+        { "@type": "City", "name": "Llanes" },
+        { "@type": "City", "name": "Celorio" },
+        { "@type": "AdministrativeArea", "name": "Oriente de Asturias" }
+      ],
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          "opens": "13:00",
-          "closes": "16:00"
+          "dayOfWeek": "Friday",
+          "opens": "20:30",
+          "closes": "23:00"
         },
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "dayOfWeek": ["Saturday", "Sunday"],
+          "opens": "13:30",
+          "closes": "15:45"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday", "Sunday"],
           "opens": "20:30",
-          "closes": "23:30"
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "13:30",
+          "closes": "15:45",
+          "validFrom": "2026-07-01",
+          "validThrough": "2026-08-31"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "20:30",
+          "closes": "23:00",
+          "validFrom": "2026-07-01",
+          "validThrough": "2026-08-31"
         }
       ],
-      "menu": "https://elchiqui.es/#carta",
-      "acceptsReservations": "True",
-      "description": "Restaurante familiar en Celorio fundado en 1966. Tres generaciones de historia ofreciendo cocina tradicional asturiana y fusión. Especialidad en arroces, pescados del Cantábrico, mariscos y cachopo."
+      "sameAs": [
+        "https://www.instagram.com/el.chiqui.celorio",
+        "https://www.google.com/maps/place/El+Chiqui/@43.4276959,-4.8100113,17z"
+      ]
     }
     </script>
-</head>
+  </head>
   <body class="bg-cream text-stone-800 antialiased selection:bg-sand selection:text-stone-900">
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>
