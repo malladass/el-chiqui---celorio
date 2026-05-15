@@ -3,8 +3,7 @@ import { MapPin, Phone, Instagram } from 'lucide-react';
 import { Button } from './Button';
 
 export const Location: React.FC = () => {
-  // WhatsApp logic reused
-  const whatsappUrl = "https://wa.me/34684603449?text=hola!%20me%20gustaria%20reservar%20una%20mesa%20con%20vosotros!%0A%0A-%20Nombre:%20%0A-%20Personas:%20%0A-%20D%C3%ADa:%20%0A-%20Hora:%20";
+  const reservationUrl = "https://mesamanager.vercel.app/reservar";
 
   return (
     <section id="ubicacion" className="py-0 flex flex-col lg:grid lg:grid-cols-2">
@@ -38,8 +37,8 @@ export const Location: React.FC = () => {
           </div>
 
           <div className="pt-8">
-            <Button href={whatsappUrl} target="_blank" className="w-full sm:w-auto bg-sand text-stone-900 hover:bg-white border-none">
-              Reservar por WhatsApp
+            <Button href={reservationUrl} target="_blank" className="w-full sm:w-auto bg-sand text-stone-900 hover:bg-white border-none">
+              Reservar Mesa
             </Button>
           </div>
         </div>

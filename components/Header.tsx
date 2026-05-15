@@ -6,8 +6,7 @@ export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // WhatsApp Link Logic
-  const whatsappUrl = "https://wa.me/34684603449?text=hola!%20me%20gustaria%20reservar%20una%20mesa%20con%20vosotros!%0A%0A-%20Nombre:%20%0A-%20Personas:%20%0A-%20D%C3%ADa:%20%0A-%20Hora:%20";
+  const reservationUrl = "https://mesamanager.vercel.app/reservar";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,7 +60,7 @@ export const Header: React.FC = () => {
               {link.name}
             </a>
           ))}
-          <Button href={whatsappUrl} target="_blank" className="!px-5 !py-2 text-xs">
+          <Button href={reservationUrl} target="_blank" className="!px-5 !py-2 text-xs">
             Reservar
           </Button>
         </nav>
@@ -91,7 +90,7 @@ export const Header: React.FC = () => {
             </a>
           ))}
           <div className="pt-4 border-t border-stone-200">
-            <Button href={whatsappUrl} target="_blank" className="w-full justify-center flex">
+            <Button href={reservationUrl} target="_blank" className="w-full justify-center flex">
               Reservar Mesa
             </Button>
           </div>
