@@ -4,23 +4,24 @@ import { motion } from 'framer-motion';
 interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
-  variant?: 'primary' | 'outline';
+  variant?: 'primary' | 'outline' | 'secondary';
   className?: string;
   href?: string;
   target?: string;
 }
 
-export const Button: React.FC<ButtonProps> = ({ 
-  children, 
-  onClick, 
-  variant = 'primary', 
-  className = '', 
+export const Button: React.FC<ButtonProps> = ({
+  children,
+  onClick,
+  variant = 'primary',
+  className = '',
   href,
   target
 }) => {
   const baseStyles = "px-6 py-3 font-medium transition-all duration-300 tracking-wide font-sans text-sm md:text-base";
   const variants = {
     primary: "bg-stone-900 text-cream hover:bg-ocean-700 shadow-md",
+    secondary: "bg-sand text-stone-900 hover:bg-white shadow-md",
     outline: "border border-stone-800 text-stone-900 hover:bg-stone-900 hover:text-cream"
   };
 

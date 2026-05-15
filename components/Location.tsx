@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Instagram } from 'lucide-react';
+import { MapPin, Phone } from 'lucide-react';
 import { Button } from './Button';
 
 export const Location: React.FC = () => {
@@ -39,7 +39,7 @@ export const Location: React.FC = () => {
           </div>
 
           <div className="pt-8">
-            <Button href={reservationUrl} target="_blank" className="w-full sm:w-auto bg-sand text-stone-900 hover:bg-white border-none">
+            <Button href={reservationUrl} target="_blank" variant="secondary" className="w-full sm:w-auto">
               Reservar Mesa
             </Button>
           </div>
