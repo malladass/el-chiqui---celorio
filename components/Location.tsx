@@ -3,7 +3,7 @@ import { MapPin, Phone } from 'lucide-react';
 import { Button } from './Button';
 
 export const Location: React.FC = () => {
-  const reservationUrl = "https://mesamanager.vercel.app/reservar";
+  const reservationUrl = "https://mesamanager.es/r/el-chiqui";
 
   return (
     <section id="ubicacion" className="py-0 flex flex-col lg:grid lg:grid-cols-2">

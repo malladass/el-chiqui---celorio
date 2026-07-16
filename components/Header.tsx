@@ -6,7 +6,7 @@ export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const reservationUrl = "https://mesamanager.vercel.app/reservar";
+  const reservationUrl = "https://mesamanager.es/r/el-chiqui";
 
   useEffect(() => {
     const handleScroll = () => {
